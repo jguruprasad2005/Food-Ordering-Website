@@ -1,0 +1,137 @@
+.food-item {
+  width: 100%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+  background-color: #fff; /* Clean white background for contrast */
+  height: 400px; /* Set a fixed height for all food items */
+  display: flex;
+  flex-direction: column; /* Ensure content is stacked vertically */
+  justify-content: space-between; /* Space out content */
+  overflow: hidden; /* Prevent overflow of content */
+}
+
+.food-item:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Increase shadow depth on hover */
+}
+
+.food-item-image {
+  width: 100%;
+  height: 100%; /* Ensure the image takes up a fixed portion of the container */
+  object-fit: cover; /* Ensure the image maintains its aspect ratio */
+  border-radius: 15px 15px 0 0;
+  transition: transform 0.3s ease; /* Smooth hover zoom effect */
+}
+
+.food-item-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.food-item-info {
+  padding: 20px;
+  text-align: center; /* Center-align the info for a cleaner look */
+  flex-grow: 1; /* Allow the info to expand and take up available space */
+}
+
+.food-item-name-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: 'Outfit', sans-serif; /* Use the same font for consistency */
+}
+
+.food-item-name-rating p {
+  font-size: 22px; /* Slightly larger for better readability */
+  font-weight: 600; /* Stronger emphasis */
+  color: #2c3e50; /* Darker text for better readability */
+}
+
+.food-item-name-rating img {
+  width: 80px; /* Slightly larger rating stars for better visibility */
+}
+
+.food-item-desc {
+  color: #7f8c8d; /* Subtle gray color for the description */
+  font-size: 14px; /* Increase font size for readability */
+  margin-top: 8px;
+  margin-bottom: 15px;
+  overflow: hidden; /* Prevent overflow of text */
+}
+
+.food-item-price {
+  color: #e74c3c; /* Eye-catching tomato red for the price */
+  font-size: 24px; /* Larger and bolder to stand out */
+  font-weight: 700; /* Strong emphasis on the price */
+  margin: 10px 0;
+  display: inline-block; /* Keeps price aligned with other elements */
+  letter-spacing: 1px; /* Add slight spacing for elegance */
+  transition: color 0.3s ease; /* Smooth transition on hover */
+  margin-top: auto; /* Push the price to the bottom of the container */
+}
+
+.food-item-price:hover {
+  color: #c0392b; /* Darken the price color on hover for emphasis */
+}
+
+.food-item-img-container {
+  position: relative; /* Allow absolute positioning of children */
+  overflow: hidden; /* Ensure children are contained within the border radius */
+  border-radius: 15px; /* Maintain the border radius for the image container */
+}
+
+.food-item-img-container .add {
+  width: 40px; /* Adjust size for better visibility */
+  height: 40px; /* Ensure it is a circle */
+  position: absolute;
+  bottom: 10px; /* Adjust to sit on the image */
+  right: 10px; /* Adjust to sit on the image */
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #e74c3c; /* Button background color */
+  display: flex; /* Center the icon */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.food-item-img-container .add:hover {
+  background-color: #c0392b; /* Darken background on hover */
+  transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+.food-item-counter {
+  position: absolute;
+  bottom: 10px; /* Positioning it slightly above the add button */
+  right: 60px; /* Positioning away from the add button */
+  display: flex;
+  align-items: center; /* Align items vertically center */
+  gap: 10px; /* Space between +, count, and - buttons */
+  padding: 6px 10px; /* Added horizontal padding for the counter */
+  border-radius: 20px; /* Round the corners */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for visibility */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+}
+
+/* Styles for the buttons inside the counter */
+.food-item-counter button {
+  border: none; /* Remove border */
+  background-color: transparent; /* Make background transparent */
+  font-size: 18px; /* Adjust size for better visibility */
+  color: #2c3e50; /* Darker color for better readability */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.food-item-counter button:hover {
+  color: #e74c3c; /* Change color on hover */
+}
+
+.food-item-counter span {
+  font-weight: bold; /* Make the number bold for emphasis */
+  color: #2c3e50; /* Darker color for better readability */
+  font-size: 20px; /* Increase font size for better visibility */
+}

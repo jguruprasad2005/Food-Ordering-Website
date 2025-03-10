@@ -1,0 +1,93 @@
+.add {
+    width: 70%;
+    margin: 50px auto; /* Center the form with auto margins */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: #6d6d6d;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif; /* Clean font style */
+}
+
+.add form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px;
+}
+
+.add-img-upload {
+    display: flex;
+    justify-content: center; /* Center the image */
+    margin-bottom: 20px; /* Space below the image upload */
+}
+
+.add-img-upload img {
+    width: 120px;
+    border-radius: 10px; /* Rounded image */
+    border: 2px dashed #ccc; /* Dashed border for upload area */
+}
+
+.add-product-name, .add-product-description,.add-price {
+    width: 100%; /* Full width for inputs */
+    max-width: 600px; /* Set a maximum width for better appearance */
+}
+
+.add-product-name input, .add-product-description textarea ,.add-price input {
+    width: 100%; /* Make inputs full width */
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border 0.3s; /* Transition for focus effect */
+}
+
+.add-product-name input:focus, .add-product-description textarea:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.add-category-price {
+    display: flex;
+    gap: 30px; /* Spacing between category and price inputs */
+}
+
+.add-category-price select, .add-category-price input {
+    max-width: 120px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.add-category-price select:hover, .add-category-price input:hover {
+    border-color: #007bff; /* Change border color on hover */
+}
+
+.add-btn {
+    max-width: 120px;
+    border: none;
+    padding: 10px;
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.add-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .add {
+        width: 90%; /* Make it wider on smaller screens */
+    }
+    
+    .add-category-price {
+        flex-direction: column; /* Stack category and price vertically */
+    }
+    
+    .add-category-price select, .add-category-price input {
+        max-width: 100%; /* Full width for small screens */
+    }
+}

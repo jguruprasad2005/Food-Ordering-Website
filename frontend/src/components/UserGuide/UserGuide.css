@@ -1,0 +1,18 @@
+/* Ensure Joyride tooltips appear above all other elements */
+.joyride-tooltip {
+    z-index: 1200; /* Higher than .navbar */
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* Customize Joyride buttons to avoid overlapping with page elements */
+.joyride-tooltip__button, .joyride-tooltip__button--skip {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+/* Position tooltips with an offset from the navbar */
+.joyride-step--navbar {
+    top: 80px; /* Adjust based on navbar height */
+}

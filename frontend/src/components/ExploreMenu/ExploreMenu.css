@@ -1,0 +1,92 @@
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 20px; /* Add padding for a cleaner layout */
+    align-items: center; /* Center-align content for a balanced look */
+  }
+  
+  .explore-menu h1 {
+    color: #262626;
+    font-weight: 600; /* Slightly bolder for better emphasis */
+    font-size: max(2vw, 28px); /* Responsive font size */
+    text-align: center; /* Center-align the heading */
+    letter-spacing: 1.5px; /* Add some letter spacing for modern style */
+  }
+  
+  .explore-text {
+    max-width: 70%; /* Increase width slightly for better spacing */
+    color: #606060; /* Use a slightly darker gray for better contrast */
+    font-size: 20px;
+    line-height: 1.5; /* Improve readability with line spacing */
+    margin: 0 auto; /* Center the text */
+    text-align: center; /* Center-align text */
+  }
+  
+  .explore-menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x: auto; /* Use auto instead of scroll for smooth behavior */
+    padding-bottom: 10px; /* Add some padding at the bottom for better spacing */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+  
+  .explore-menu-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+  }
+  
+  .explore-menu-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .explore-menu-list img {
+    width: 7.5vw;
+    min-width: 80px;
+    cursor: pointer;
+    transition: 0.2s; /* Keep a smooth transition for images */
+    border-radius: 50%;
+    border: 2px solid #e0e0e0; /* Add light border for better emphasis */
+  }
+  
+  .explore-menu-list img:hover {
+    border-color: #ff6347; /* Change border to tomato on hover */
+  }
+  
+  .explore-menu-list p {
+    margin-top: 10px;
+    cursor: pointer;
+    color: #747474;
+    font-size: max(1.4vw, 16px);
+    transition: color 0.3s ease; /* Smooth transition for hover */
+  }
+  
+  .explore-menu-list p:hover {
+    color: #ff6347; /* Change text color on hover */
+  }
+  
+  .explore-menu hr {
+    margin: 10px 0px;
+    color: #dcdcdc; /* Lighter color for the divider */
+    height: 2px;
+    border: none;
+    background-color: #e0e0e0;
+    width: 100%; /* Stretch across the entire width */
+  }
+  
+  .explore-menu-list-item .active {
+    border: 4px solid tomato;
+    padding: 2px;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+  }
+  
+  .explore-menu-list-item .active img {
+    border-color: tomato; /* Ensure the image border matches when active */
+  }
+  

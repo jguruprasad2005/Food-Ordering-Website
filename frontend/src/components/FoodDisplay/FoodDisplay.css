@@ -1,0 +1,23 @@
+.food-display {
+    margin-top: 30px;
+    padding-left: 20px; /* Add some padding on left and right */
+    padding-right: 20px;
+  }
+  
+  .food-display h2 {
+    font-size: max(2vw, 28px);  /* Responsive font size, with a minimum of 28px */
+    font-weight: 600;           /* Set a bold font weight */
+    margin-bottom: 20px;        /* Add space below the heading */
+    text-align: center;         /* Center-align the heading */
+    color: #333;                /* Darker color for better readability */
+    letter-spacing: 1px;        /* Add slight spacing between letters */
+  }
+  
+  .food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    row-gap: 50px;
+    padding-left: 10px; /* Optional: further customize grid spacing */
+    padding-right: 10px;
+  }

@@ -1,0 +1,121 @@
+/* Main Header Section */
+.header {
+    height: 34vw;
+    margin: 30px 8%;
+    background-size: cover; /* Ensure the background image always covers the entire header */
+    background-position: center center;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+    /* Slideshow animation */
+    animation: backgroundSlideshow 20s infinite ease-in-out; /* 20 seconds for each cycle */
+}
+
+/* Keyframes for the slideshow */
+@keyframes backgroundSlideshow {
+    0% {
+        background-image: url('/home/gurup/Desktop/food-del/frontend/src/assets/myHeader.png');
+    }
+    25% {
+        background-image: url('/home/gurup/Desktop/food-del/frontend/src/assets/header_img2.png');
+    }
+    65% {
+        background-image: url('/home/gurup/Desktop/food-del/frontend/src/assets/myHeader.png');
+    }
+    100% {
+        background-image: url('/home/gurup/Desktop/food-del/frontend/src/assets/header_img2.png');
+    }
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 12%;
+    left: 6vw;
+    animation: fadeIn 3s;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* Added text shadow for readability */
+}
+
+.header-contents h2 {
+    font-weight: 700;
+    color: white;
+    font-size: max(4vw, 22px);
+    line-height: 1.2;
+}
+
+.header-contents p {
+    color: white;
+    font-size: max(1.2vw, 16px);
+    margin-bottom: 1vw;
+}
+
+.header-contents button {
+    border: none;
+    padding: 1.2vw 2.5vw;
+    background-color: white;
+    border-radius: 50px;
+    color: #333;
+    font-size: max(1.2vw, 14px);
+    transition: all 0.3s ease;
+}
+
+.header-contents button:hover {
+    background-color: #f7a700;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .header {
+        height: 50vw;
+        margin: 20px 5%;
+    }
+    
+    .header-contents {
+        max-width: 80%;
+        bottom: 8%;
+        left: 4vw;
+    }
+    
+    .header-contents h2 {
+        font-size: max(6vw, 20px);
+    }
+    
+    .header-contents p {
+        font-size: max(2vw, 14px);
+    }
+    
+    .header-contents button {
+        padding: 1.5vw 3vw;
+        font-size: max(2vw, 14px);
+    }
+}
+
+
+
+@media (max-width: 1050px) {
+      
+    .header-contents {
+      max-width: 45%;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .header-contents {
+      max-width: 65%;
+    }
+  
+    .header-contents p {
+      display: none;
+    }
+  
+    .header-contents button {
+      padding: 2vw 4vw;
+    }
+  }
